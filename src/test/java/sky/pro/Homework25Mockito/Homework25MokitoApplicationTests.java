@@ -1,4 +1,4 @@
-package sky.pro.Homework25Mokito;
+package sky.pro.Homework25Mockito;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
