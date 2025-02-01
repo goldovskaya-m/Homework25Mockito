@@ -12,8 +12,18 @@ public class Employee {
 
         this.lastName = lastName;
         this.firstName = firstName;
-        this.departmentId = getDepartmentId();
-        this.salary = getSalary();
+       // this.departmentId = departmentId;
+       // this.salary = salary;
+
+
+    }
+
+    public Employee(String lastName, String firstName, int departmentId, double salary) {
+
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.departmentId = departmentId;
+        this.salary = salary;
 
     }
 
