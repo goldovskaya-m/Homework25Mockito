@@ -12,10 +12,6 @@ public class Employee {
 
         this.lastName = lastName;
         this.firstName = firstName;
-       // this.departmentId = departmentId;
-       // this.salary = salary;
-
-
     }
 
     public Employee(String lastName, String firstName, int departmentId, double salary) {
@@ -26,7 +22,6 @@ public class Employee {
         this.salary = salary;
 
     }
-
     public String getLastName() {
         return lastName;
     }

@@ -13,6 +13,7 @@ public class TestAssistant {
     public static final int TEST_DEPARTMENT_ID = 56;
     public static final double TEST_SALARY = 4000;
 
+
     private static final Random RANDOM = new Random();
 
     public static Employee createEmployee(String lastName, String firstName, int departmentId, double salary) {
@@ -33,7 +34,5 @@ public class TestAssistant {
     public static Employee createEmployee(int departmentId) {
         return createEmployee(randomAlphabetic(12),
                 randomAlphabetic(12), departmentId, RANDOM.nextDouble(0, 200_000));
-
-
     }
 }

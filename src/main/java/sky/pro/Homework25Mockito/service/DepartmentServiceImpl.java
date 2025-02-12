@@ -40,7 +40,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     public double getSumSalaryEmployee(int departmentId) {
         return employeeService.findAll()
                 .stream()
-                .filter(emp -> emp.getDepartmentId() == departmentId)
+                .filter(employee -> employee.getDepartmentId() == departmentId)
                 .mapToDouble(Employee::getSalary)
                 .sum();
     }
@@ -52,12 +52,12 @@ public class DepartmentServiceImpl implements DepartmentService {
     public List<Employee> getAllEmployeeDepartment(int departmentId) {
         return employeeService.findAll()
                 .stream()
-                .filter(emp -> emp.getDepartmentId() == departmentId)
+                .filter(employee -> employee.getDepartmentId() == departmentId)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public Map<Integer, List<Employee>> getAllEmployees() {
+    public Map<Integer, List<Employee>> getAllEmployees( int departmentId) {
         return employeeService.findAll()
                 .stream()
                 .collect(Collectors.groupingBy

@@ -54,8 +54,8 @@ public class DepartmentController {
     }
 
     @GetMapping("/department/{id}/all")
-    public Map<Integer, List<Employee>> getAllEmployees() {
-        return departmentService.getAllEmployees();
+    public Map<Integer, List<Employee>> getAllEmployees(@PathVariable Integer Id) {
+        return departmentService.getAllEmployees(Id);
 
     }
 }
