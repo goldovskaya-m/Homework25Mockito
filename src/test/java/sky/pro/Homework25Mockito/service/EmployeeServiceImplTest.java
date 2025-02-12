@@ -131,10 +131,29 @@ class EmployeeServiceImplTest {
 
     }
 
+    @DisplayName("Негативный тест, список сотрудников пуст")
+    @Test
+    void listIsEmpty() {
+        employeeService.add(TEST_FIRSTNAME, TEST_LASTNAME);
+        //test
+        Employee actual = employeeService.remove(TEST_FIRSTNAME, TEST_LASTNAME);
+        //check
+        Collection<Employee> result = employeeService.findAll();
+        assertThat(result).isEmpty();
+    }
+
     @Test
     void validateNames() {
 
         employeeService.add(TEST_FIRSTNAME, TEST_LASTNAME, TEST_DEPARTMENT_ID, TEST_SALARY);
+        assertThat(InvalidNameException.class);
+        Collection<Employee> all = employeeService.findAll();
+    }
+
+    @Test
+    void validateNames2() {
+
+        employeeService.add(TEST_FIRSTNAME, TEST_LASTNAME);
         assertThat(InvalidNameException.class);
         Collection<Employee> all = employeeService.findAll();
     }

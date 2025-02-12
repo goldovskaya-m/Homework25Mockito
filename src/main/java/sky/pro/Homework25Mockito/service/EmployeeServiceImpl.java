@@ -77,6 +77,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Collection<Employee> findAll() {
         return Collections.unmodifiableCollection(employees.values());
     }
+
+
     private void validateNames(String firstName, String lastName) {
         if (!StringUtils.isAlpha(firstName)) {
             throw new InvalidNameException(firstName);
